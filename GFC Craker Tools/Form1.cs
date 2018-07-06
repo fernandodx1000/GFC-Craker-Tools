@@ -22,7 +22,6 @@ namespace GFC_Craker_Tools
             foreach (FileInfo file in dir.GetFiles())
 
             {
-
                 try
 
                 {
@@ -41,18 +40,10 @@ namespace GFC_Craker_Tools
             }
 
             this.listView1.View = View.LargeIcon;
-
+            this.listView1.Columns.Add("tet",150);
             this.imageList1.ImageSize = new Size(128, 128);
 
             this.listView1.LargeImageList = this.imageList1;
-
-            //or
-
-            //this.listView1.View = View.SmallIcon;
-
-            //this.listView1.SmallImageList = this.imageList1;
-
-
 
             for (int j = 0; j < this.imageList1.Images.Count; j++)
 
@@ -62,24 +53,18 @@ namespace GFC_Craker_Tools
 
                 item.ImageIndex = j;
 
-                this.listView1.Items.Add(item);
+                this.listView1.Items.Add("nao sei como mudar", j);
 
             }
 
         }
-
-       
+        // Click Na Imagem
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
+            String selected = listView1.SelectedItems[0].Name.ToString();
+            MessageBox.Show(selected);
         }
-        
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
