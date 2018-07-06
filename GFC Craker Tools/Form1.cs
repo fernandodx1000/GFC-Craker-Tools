@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GFC_Tools;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +15,16 @@ namespace GFC_Craker_Tools
 {
     public partial class Form1 : Form
     {
+        static Variables variables = new Variables();
+
         public Form1()
         {
             InitializeComponent();
+            Populate();
+        }
+
+        private void Populate()
+        {
             DirectoryInfo dir = new DirectoryInfo(@"H:\Documentos\projectos c#\GFC Craker Tools\GFC Craker Tools\Resources\Images\Softwares\Icons");
 
             foreach (FileInfo file in dir.GetFiles())
@@ -40,7 +48,7 @@ namespace GFC_Craker_Tools
             }
 
             this.listView1.View = View.LargeIcon;
-            this.listView1.Columns.Add("tet",150);
+            this.listView1.Columns.Add("tet", 150);
             this.imageList1.ImageSize = new Size(128, 128);
 
             this.listView1.LargeImageList = this.imageList1;
@@ -58,15 +66,39 @@ namespace GFC_Craker_Tools
             }
 
         }
+
         // Click Na Imagem
+        String selected;
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            String selected = listView1.SelectedItems[0].Name.ToString();
+             selected = listView1.SelectedItems[0].Name.ToString();
             MessageBox.Show(selected);
+
+
+
+
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            variables.Main();
+        }
+
+        private void panel3_DoubleClick(object sender, EventArgs e)
+        {
+            MessageBox.Show(selected);
+        }
+
+        //exit Buton
+        private void panel5_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
+        // label version
+        private void label5_Paint(object sender, PaintEventArgs e)
+        {
+            label5.Text = "Version: " + variables.CurentVersion;
 
         }
+        
     }
 }
