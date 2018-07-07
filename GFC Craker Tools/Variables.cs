@@ -12,6 +12,7 @@ namespace GFC_Tools
         Version version = Assembly.GetEntryAssembly().GetName().Version;
 
         public string MrUrl = "http://gfcdownloads.co.nf/download/gfc/?wpdmdl=80";
+        public string ConfigUrl = "http://gfcdownloads.co.nf/gfc_crack_tool/gfc-setings.xml";
 
         public void Main()
         {

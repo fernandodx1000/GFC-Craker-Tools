@@ -16,8 +16,9 @@ namespace GFC_Craker_Tools
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            LoadScreen();
-            LoadMainScreen();
+            // LoadScreen();
+            // LoadMainScreen();
+            Application.Run(new GFC_MainScreen());
         }
 
         private static void LoadScreen()
