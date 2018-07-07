@@ -10,6 +10,7 @@ namespace GFC_Craker_Tools
     {
         public void SwCrack(string software)
         {
+
             switch (software)
             {
                 case"ccleaner":

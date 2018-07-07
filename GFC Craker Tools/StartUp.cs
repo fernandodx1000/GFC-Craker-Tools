@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace GFC_Craker_Tools
 {
-    static class Program
+    static class StartUp
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,20 @@ namespace GFC_Craker_Tools
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            LoadScreen();
+            LoadMainScreen();
         }
+
+        private static void LoadScreen()
+        {
+            Application.Run(new GFC_LoadScreen());
+
+        }
+
+        private static void LoadMainScreen()
+        {
+            Application.Run(new GFC_MainScreen());
+        }
+
     }
 }

@@ -13,11 +13,12 @@ using System.Windows.Forms;
 
 namespace GFC_Craker_Tools
 {
-    public partial class Form1 : Form
+    public partial class GFC_MainScreen : Form
     {
         static Variables variables = new Variables();
+        static GFC_Func gfc_Func = new GFC_Func();
 
-        public Form1()
+        public GFC_MainScreen()
         {
             InitializeComponent();
             Populate();
@@ -25,6 +26,30 @@ namespace GFC_Craker_Tools
 
         private void Populate()
         {
+            DirectoryInfo dir = new DirectoryInfo(@"H:\Documentos\projectos c#\GFC Craker Tools\GFC Craker Tools\Resources\Images\Softwares\Icons");
+            this.listView1.View = View.LargeIcon;
+            this.imageList1.ImageSize = new Size(100, 100);
+            this.listView1.LargeImageList = this.imageList1;
+            int j = 0;
+            foreach (FileInfo file in dir.GetFiles())
+            {
+                try
+                {
+                    //this.imageList1.Images.Add(Image.FromFile(file.FullName));
+                    imageList1.Images.Add(file.Name, Image.FromFile(file.FullName));
+                    ListViewItem item = new ListViewItem(file.Name);
+                    item.Tag = file.Name;
+                    item.ImageIndex = j;
+                    this.listView1.Items.Add(item);
+                    j++;
+                }
+                catch
+                {
+                    Console.WriteLine("This is not an image file");
+                }
+            }
+
+            /*
             DirectoryInfo dir = new DirectoryInfo(@"H:\Documentos\projectos c#\GFC Craker Tools\GFC Craker Tools\Resources\Images\Softwares\Icons");
 
             foreach (FileInfo file in dir.GetFiles())
@@ -61,23 +86,20 @@ namespace GFC_Craker_Tools
 
                 item.ImageIndex = j;
 
-                this.listView1.Items.Add("nao sei como mudar", j);
+                this.listView1.Items.Add(item.Text, j);
 
             }
-
+            */
         }
 
         // Click Na Imagem
         String selected;
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-             selected = listView1.SelectedItems[0].Name.ToString();
+             selected = listView1.SelectedItems[0].Text;
             MessageBox.Show(selected);
-
-
-
-
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             variables.Main();
@@ -85,7 +107,13 @@ namespace GFC_Craker_Tools
 
         private void panel3_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(selected);
+            ListViewItem item = listView1.SelectedItems[0];
+            selected = item.Tag.ToString();
+
+            string s1;
+           s1 = selected.Remove(selected.Count() - 3, selected.Count());
+            gfc_Func.SwCrack(selected);
+            MessageBox.Show(s1);
         }
 
         //exit Buton
@@ -93,12 +121,37 @@ namespace GFC_Craker_Tools
         {
             Application.Exit();
         }
+
         // label version
         private void label5_Paint(object sender, PaintEventArgs e)
         {
             label5.Text = "Version: " + variables.CurentVersion;
 
         }
-        
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
