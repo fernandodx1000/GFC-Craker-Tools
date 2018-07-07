@@ -18,6 +18,8 @@ namespace GFC_Craker_Tools
         static Variables variables = new Variables();
         static GFC_Func gfc_Func = new GFC_Func();
 
+        public int Tab = 1;
+
         public GFC_MainScreen()
         {
             InitializeComponent();
@@ -96,7 +98,6 @@ namespace GFC_Craker_Tools
 
         }
 
-        private int GFC_Tab;
 
         // Click Na Imagem
         String selected;
@@ -111,6 +112,7 @@ namespace GFC_Craker_Tools
         private void Form1_Load(object sender, EventArgs e)
         {
             variables.Main();
+            Tab = 1;
 
         }
 
@@ -147,12 +149,14 @@ namespace GFC_Craker_Tools
         {
             listView1.Clear();
             Populatesw();
+            Tab = 1;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             listView1.Clear();
             PopulateGames();
+            Tab = 2;
         }
 
     }

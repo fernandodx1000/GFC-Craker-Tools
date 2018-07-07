@@ -199,7 +199,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.ImageList imageList2;
+        public System.Windows.Forms.ImageList imageList2;
     }
 }
 

@@ -26,8 +26,17 @@ namespace GFC_Craker_Tools
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = GFC_MainScreen.imageList1.Images[ImgIndex];
-            
+            if (GFC_MainScreen.Tab == 1)
+            {
+                pictureBox1.Image = GFC_MainScreen.imageList1.Images[ImgIndex];
+
+            }
+            if (GFC_MainScreen.Tab == 2)
+            {
+                pictureBox1.Image = GFC_MainScreen.imageList2.Images[ImgIndex];
+
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
