@@ -26,7 +26,7 @@ namespace GFC_Craker_Tools
             Populatesw();
 
         }
-
+       
         private void Populatesw()
         {
             DirectoryInfo dir = new DirectoryInfo(@"H:\Documentos\projectos c#\GFC Craker Tools\GFC Craker Tools\Resources\Images\Softwares\Icons");
@@ -62,6 +62,7 @@ namespace GFC_Craker_Tools
 
             
         }
+        
         private void PopulateGames()
         {
 
@@ -105,7 +106,8 @@ namespace GFC_Craker_Tools
         {
             selected = listView1.SelectedItems[0].Text;
             Form1 test = new Form1(selected, listView1.SelectedItems[0].Index);
-            test.ShowDialog();
+            Console.WriteLine(listView1.SelectedItems[0].Index);
+            //test.ShowDialog();
             //this.Hide();
         }
 
@@ -116,7 +118,7 @@ namespace GFC_Craker_Tools
 
         }
 
-        private void panel3_DoubleClick(object sender, EventArgs e)
+      /*  private void panel3_DoubleClick(object sender, EventArgs e)
         {
             ListViewItem item = listView1.SelectedItems[0];
             selected = item.Tag.ToString();
@@ -126,7 +128,7 @@ namespace GFC_Craker_Tools
             gfc_Func.SwCrack(selected);
             MessageBox.Show(s1);
         }
-
+        */
         //exit Buton
         private void panel5_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -147,17 +149,34 @@ namespace GFC_Craker_Tools
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listView1.Clear();
-            Populatesw();
-            Tab = 1;
+            changeTab(1);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            listView1.Clear();
-            PopulateGames();
-            Tab = 2;
+            changeTab(2);
         }
+
+        private void changeTab(int TabToChange)
+        {
+            if (TabToChange == 0)
+            {
+                
+            }
+            if (TabToChange == 1)
+            {
+                listView1.Clear();
+                Populatesw();
+                Tab = 1;
+            }
+            if (TabToChange == 2)
+            {
+                listView1.Clear();
+                PopulateGames();
+                Tab = 2;
+            }
+        }
+
 
     }
 }

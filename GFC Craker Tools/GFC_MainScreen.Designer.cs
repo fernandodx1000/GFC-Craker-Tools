@@ -186,7 +186,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
@@ -200,6 +199,7 @@
         private System.Windows.Forms.Button button2;
         public System.Windows.Forms.ImageList imageList1;
         public System.Windows.Forms.ImageList imageList2;
+        public System.Windows.Forms.ListView listView1;
     }
 }
 
