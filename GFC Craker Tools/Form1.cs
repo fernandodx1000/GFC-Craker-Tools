@@ -23,13 +23,15 @@ namespace GFC_Craker_Tools
 
         private void button1_Click(object sender, EventArgs e)
         {
+            GFC_Func.launchFile(@"C:\setup.exe");
+            Console.WriteLine(ProgramToCrack);
             GFC_Func.SwCrack(ProgramToCrack);
+        
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             pictureBox1.Image = ImageToShow;
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
