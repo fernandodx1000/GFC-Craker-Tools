@@ -13,7 +13,6 @@ namespace GFC_Craker_Tools
         static Variables variables = new Variables();
         static Image ImageToShow;
 
-        string se2;
         public Form1(string program, Image image)
         { 
             InitializeComponent();
