@@ -25,7 +25,7 @@
     <UpdateUrl>http://192.168.1.36:8000/</UpdateUrl>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>22</ApplicationRevision>
+    <ApplicationRevision>23</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -51,10 +51,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>1BE29BBC50205445671FB793486472A599DD98BC</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>C90019FC834978763868010AA02BACFA7C7A2F49</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>GFC Craker Tools_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>GFC Craker Tools_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -67,10 +67,13 @@
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>GFC Craker Tools_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -131,6 +134,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
+    <None Include="GFC Craker Tools_1_TemporaryKey.pfx" />
     <None Include="GFC Craker Tools_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

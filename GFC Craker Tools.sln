@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GFC Craker Tools", "GFC Craker Tools\GFC Craker Tools.csproj", "{72C9D304-69EE-4208-8492-9937393B220C}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{1FCDDB62-5656-4CB2-9C96-2D336557C4A4}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{C97A97ED-6FE9-4F41-91CE-EA1C5428E93D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{72C9D304-69EE-4208-8492-9937393B220C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72C9D304-69EE-4208-8492-9937393B220C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72C9D304-69EE-4208-8492-9937393B220C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FCDDB62-5656-4CB2-9C96-2D336557C4A4}.Debug|Any CPU.ActiveCfg = Debug
-		{1FCDDB62-5656-4CB2-9C96-2D336557C4A4}.Release|Any CPU.ActiveCfg = Release
+		{C97A97ED-6FE9-4F41-91CE-EA1C5428E93D}.Debug|Any CPU.ActiveCfg = Debug
+		{C97A97ED-6FE9-4F41-91CE-EA1C5428E93D}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
