@@ -61,12 +61,7 @@ namespace GFC_Craker_Tools
             selected = listView1.SelectedItems[0].Text;
             var item = listView1.SelectedItems[0];
 
-            if (Tab == 2)
-            {
-                ImageInstall = imageList2.Images[listView1.SelectedItems[0].Index];
-                Console.WriteLine(listView1.SelectedItems[0].Index);
-
-            }
+            setInstallImage();
 
             Form1 test = new Form1(selected, ImageInstall);
             test.ShowDialog();
@@ -112,6 +107,7 @@ namespace GFC_Craker_Tools
             {
                 Tab = 1;
                 listView1.Clear();
+                this.listView1.LargeImageList = this.imageList1;
                 Populatesw();
                 
             }
@@ -119,9 +115,15 @@ namespace GFC_Craker_Tools
             {
                 Tab = 2;
                 listView1.Clear();
+                this.listView1.LargeImageList = this.imageList2;
                 PopulateGames();
             }
+
+           
         }
+
+        bool p1 = true;
+        bool p2 = true;
         private void Populatesw()
         {
             DirectoryInfo dir = new DirectoryInfo(@"H:\Documentos\projectos c#\GFC Craker Tools\GFC Craker Tools\Resources\Images\Softwares\Icons");
@@ -129,30 +131,36 @@ namespace GFC_Craker_Tools
             this.imageList1.ImageSize = new Size(100, 100);
             this.listView1.LargeImageList = this.imageList1;
             int j = 0;
-            foreach (FileInfo file in dir.GetFiles())
+
+            if (p1)
             {
-                try
+
+                foreach (FileInfo file in dir.GetFiles())
                 {
-                    //this.imageList1.Images.Add(Image.FromFile(file.FullName));
+                    try
+                    {
+                        //this.imageList1.Images.Add(Image.FromFile(file.FullName));
 
-                    string input = file.Name;
-                    int index = input.IndexOf(".");
-                    if (index > 0) { input = input.Substring(0, index); }
+                        string input = file.Name;
+                        int index = input.IndexOf(".");
+                        if (index > 0) { input = input.Substring(0, index); }
 
 
-                    imageList1.Images.Add(input, Image.FromFile(file.FullName));
-                    ListViewItem item = new ListViewItem(input);
-                    //item.Tag = file.Name;
+                        imageList1.Images.Add(input, Image.FromFile(file.FullName));
+                        ListViewItem item = new ListViewItem(input);
+                        //item.Tag = file.Name;
 
-                    item.Tag = input;
-                    item.ImageIndex = j;
-                    this.listView1.Items.Add(item);
-                    j++;
+                        item.Tag = input;
+                        item.ImageIndex = j;
+                        this.listView1.Items.Add(item);
+                        j++;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("This is not an image file");
+                    }
                 }
-                catch
-                {
-                    Console.WriteLine("This is not an image file");
-                }
+
             }
 
 
@@ -166,32 +174,35 @@ namespace GFC_Craker_Tools
             this.imageList2.ImageSize = new Size(100, 100);
             this.listView1.LargeImageList = this.imageList2;
             int j = 0;
-            foreach (FileInfo file in dir2.GetFiles())
+
+            if (p2)
             {
-                try
+                foreach (FileInfo file in dir2.GetFiles())
                 {
-                    //this.imageList1.Images.Add(Image.FromFile(file.FullName));
+                    try
+                    {
+                        //this.imageList1.Images.Add(Image.FromFile(file.FullName));
 
-                    string input = file.Name;
-                    int index = input.IndexOf(".");
-                    if (index > 0) { input = input.Substring(0, index); }
+                        string input = file.Name;
+                        int index = input.IndexOf(".");
+                        if (index > 0) { input = input.Substring(0, index); }
 
 
-                    imageList2.Images.Add(input, Image.FromFile(file.FullName));
-                    ListViewItem item = new ListViewItem(input);
-                    //item.Tag = file.Name;
+                        imageList2.Images.Add(input, Image.FromFile(file.FullName));
+                        ListViewItem item = new ListViewItem(input);
+                        //item.Tag = file.Name;
 
-                    item.Tag = input;
-                    item.ImageIndex = j;
-                    this.listView1.Items.Add(item);
-                    j++;
-                }
-                catch
-                {
-                    Console.WriteLine("This is not an image file");
+                        item.Tag = input;
+                        item.ImageIndex = j;
+                        this.listView1.Items.Add(item);
+                        j++;
+                    }
+                    catch
+                    {
+                        Console.WriteLine("This is not an image file");
+                    }
                 }
             }
-
         }
     }
 }

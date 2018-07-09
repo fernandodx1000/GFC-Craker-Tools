@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GFC Craker Tools")]
+[assembly: AssemblyTitle("GFC_Updater")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GFC Craker Tools")]
+[assembly: AssemblyProduct("GFC_Updater")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("72c9d304-69ee-4208-8492-9937393b220c")]
+[assembly: Guid("67892782-2396-4048-9699-a246e9f2c1fb")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,7 +32,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.219.190")]
-[assembly: AssemblyFileVersion("1.0.219.190")]
+[assembly: AssemblyVersion("1.0.4.190")]
+[assembly: AssemblyFileVersion("1.0.4.190")]
 
-[assembly: AssemblyInformationalVersion("1.0.217")]
+[assembly: AssemblyInformationalVersion("1.0.4")]
