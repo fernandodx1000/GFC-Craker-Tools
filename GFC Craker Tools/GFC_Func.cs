@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using GFC_Tools;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,6 +13,9 @@ namespace GFC_Craker_Tools
 {
     class GFC_Func
     {
+
+        static Variables variables = new Variables();
+
         public void SwCrack(string software)
         {
 
@@ -76,6 +80,17 @@ namespace GFC_Craker_Tools
                     p.Start();
                 }
             }
+        }
+        public void CheckForUpdate()
+        {
+            String curentversion = variables.CurentVersion;
+            String UpdateVersion = ReadSiteXml(variables.ConfigUrl, "//gfc/config","version");
+
+            if (curentversion != UpdateVersion)
+            {
+                Console.WriteLine("Version "+ UpdateVersion+ " is available!");
+            }
+
         }
     }
 }

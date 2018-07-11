@@ -25,6 +25,7 @@ namespace GFC_Craker_Tools
 
         public GFC_MainScreen()
         {
+            this.Hide();
             InitializeComponent();
              
    

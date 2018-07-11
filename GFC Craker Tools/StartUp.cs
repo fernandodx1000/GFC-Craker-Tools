@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,14 +12,18 @@ namespace GFC_Craker_Tools
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+
+
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // LoadScreen();
-            // LoadMainScreen();
-            Application.Run(new GFC_MainScreen());
+            Thread t = new Thread(LoadMainScreen);
+            t.Start();
+            GFC_Func func = new GFC_Func();
+            func.CheckForUpdate();
         }
 
         private static void LoadScreen()
