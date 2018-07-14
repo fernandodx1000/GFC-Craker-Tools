@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GFC_Craker_Tools.GFC_Crack
+namespace GFC_Craker_Tools.GFC_IOBit
 {
     class GFC_IOBit
     {

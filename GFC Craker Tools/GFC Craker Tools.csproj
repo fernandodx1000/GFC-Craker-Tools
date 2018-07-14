@@ -95,6 +95,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GFC_Crack\GFC_IOBit.cs" />
     <Compile Include="GFC_Crack\GFC_CCleaner.cs" />
     <Compile Include="GFC_MainScreen.cs">
       <SubType>Form</SubType>

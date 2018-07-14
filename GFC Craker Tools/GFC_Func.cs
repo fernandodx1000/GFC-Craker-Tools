@@ -19,7 +19,7 @@ namespace GFC_Craker_Tools
     class GFC_Func
     {
 
-        static GFC_CCleaner GFC_CCleaner = new GFC_CCleaner();
+        static GFC_IOBit GFC_CCleaner = new GFC_IOBit();
 
 
         
