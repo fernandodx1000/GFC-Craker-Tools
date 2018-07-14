@@ -11,8 +11,33 @@
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
 "SccProvider" = "8:"
+"BackwardsCompatibleGUIDGeneration" = "8:TRUE"
     "Hierarchy"
     {
+        "Entry"
+        {
+        "MsmKey" = "8:_60448FB8CFA248B4878FA934A612061F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_777CA2E0B09C4AFB849125C19C1121B4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8EB51363581B4C7CA10711A8401675AF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8FB51C42AED34BEFB37B39DC6041C43D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
         "Entry"
         {
         "MsmKey" = "8:_949A0B8D639C4AA1BEBA8EB4E4DBEFDF"
@@ -23,6 +48,18 @@
         {
         "MsmKey" = "8:_A85872B4DA8E4F518858860F901431C8"
         "OwnerKey" = "8:_949A0B8D639C4AA1BEBA8EB4E4DBEFDF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AF7FBE302AE142C3A5BE20B4E7C91377"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DDE8FFA8F6344A278E633092131FBBC4"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -86,6 +123,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -116,6 +161,86 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_60448FB8CFA248B4878FA934A612061F"
+            {
+            "SourcePath" = "8:..\\GFC Craker Tools\\Resources\\Images\\Softwares\\Icons\\Malwarebytes Premium.jpg"
+            "TargetName" = "8:Malwarebytes Premium.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_D697E80255D44495AA5A23C48F399D41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_777CA2E0B09C4AFB849125C19C1121B4"
+            {
+            "SourcePath" = "8:..\\GFC Craker Tools\\Resources\\Images\\Softwares\\Icons\\CCleaner.jpg"
+            "TargetName" = "8:CCleaner.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_D697E80255D44495AA5A23C48F399D41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8EB51363581B4C7CA10711A8401675AF"
+            {
+            "SourcePath" = "8:..\\GFC Craker Tools\\Resources\\Images\\Games\\Icons\\Sims 4.png"
+            "TargetName" = "8:Sims 4.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D75BFB85F0A24B768D9408A38673D51B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8FB51C42AED34BEFB37B39DC6041C43D"
+            {
+            "SourcePath" = "8:..\\GFC Craker Tools\\Resources\\Images\\Softwares\\Icons\\PowerISO Crack.jpg"
+            "TargetName" = "8:PowerISO Crack.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_D697E80255D44495AA5A23C48F399D41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A85872B4DA8E4F518858860F901431C8"
             {
             "AssemblyRegister" = "3:1"
@@ -147,6 +272,46 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AF7FBE302AE142C3A5BE20B4E7C91377"
+            {
+            "SourcePath" = "8:..\\GFC Craker Tools\\Resources\\Images\\Games\\Icons\\cona.ico"
+            "TargetName" = "8:cona.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_D75BFB85F0A24B768D9408A38673D51B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DDE8FFA8F6344A278E633092131FBBC4"
+            {
+            "SourcePath" = "8:..\\GFC Craker Tools\\Resources\\Images\\Softwares\\Icons\\Avira Antivirus Pro 2017.png"
+            "TargetName" = "8:Avira Antivirus Pro 2017.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D697E80255D44495AA5A23C48F399D41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -174,6 +339,72 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_0BE3A2FBB09D42B283CBC1005D335C6D"
+                    {
+                    "Name" = "8:Resources"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_D1E1E0266E52426C8AE8445C713D72E7"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_E2DE24CC42CD4811BCB26D4FB43255E0"
+                            {
+                            "Name" = "8:Images"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_AC78CB63D06C4A688AB0B16911C8433F"
+                                "Folders"
+                                {
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_5CFFBA4F86A949A88C9EE5AFA58627C8"
+                                    {
+                                    "Name" = "8:Games"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_65826A84B67D4B7BAD2D06A6C060E5C0"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_D75BFB85F0A24B768D9408A38673D51B"
+                                            {
+                                            "Name" = "8:Icons"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_9A824EAB52154A1FAAF7B4099C5A10C0"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_D4AED6545FE64E23ADA648E312156EAD"
+                                    {
+                                    "Name" = "8:Softwares"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_15AE147DA79D42BDA6B72F21DA30C7D2"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_D697E80255D44495AA5A23C48F399D41"
+                                            {
+                                            "Name" = "8:Icons"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_CFDBB9E0E5C54EA3B782A670794B6ECB"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_8A19143C884447CAAAE97FC5498857BD"
@@ -204,7 +435,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup1"
         "ProductCode" = "8:{F71EC414-808F-41A6-B01F-48977C0EC0DE}"
-        "PackageCode" = "8:{2D74E506-DB64-41E3-ACF5-997EBD27ACC3}"
+        "PackageCode" = "8:{E247E504-973D-4C01-8154-111800B837B7}"
         "UpgradeCode" = "8:{FCE159E1-012A-4694-A376-DA3F894E3B35}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -217,7 +448,7 @@
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup1"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:GFC"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -795,7 +1026,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_949A0B8D639C4AA1BEBA8EB4E4DBEFDF"
             {
-            "SourcePath" = "8:..\\GFC Craker Tools\\obj\\Debug\\GFC Craker Tools.exe"
+            "SourcePath" = "8:..\\GFC Craker Tools\\obj\\Release\\GFC Craker Tools.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_4E6FA624BA8A443E845BD8ED642AC53B"

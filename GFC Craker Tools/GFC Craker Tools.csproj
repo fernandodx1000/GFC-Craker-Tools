@@ -95,6 +95,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GFC_Crack\GFC_CCleaner.cs" />
     <Compile Include="GFC_MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,12 +150,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Images\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\if_error_1646012.ico" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>

@@ -2,19 +2,27 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml;
+using GFC_Craker_Tools.GFC_Crack;
+
 
 namespace GFC_Craker_Tools
 {
     class GFC_Func
     {
 
-        static Variables variables = new Variables();
+        static GFC_CCleaner GFC_CCleaner = new GFC_CCleaner();
+
+
+        
 
         public void SwCrack(string software)
         {
@@ -22,10 +30,7 @@ namespace GFC_Craker_Tools
             switch (software)
             {
                 case "CCleaner":
-                    Console.WriteLine("ccleaner");
-                    launchFile("H:/Programas/Ficheiros de pogramas/u1603.exe");
-
-
+                    GFC_CCleaner.Main();
                     break;
                 default:
                     Console.WriteLine("Unknown Software " + software);
@@ -34,7 +39,7 @@ namespace GFC_Craker_Tools
 
 
         }
-        public string ReadSiteXml(string url, string selectnodes, string nodetoread)//string url, string node1
+        public static string ReadSiteXml(string url, string selectnodes, string nodetoread)//string url, string node1
         {
             XmlDocument doc1 = new XmlDocument();
             doc1.Load(url);
@@ -49,6 +54,33 @@ namespace GFC_Craker_Tools
                 return nodestring;
             }
             return null;
+        }
+
+        public static void UpdateGFC()
+        {
+            string uri = ReadSiteXml(Variables.ConfigUrl,"//gfc/updater", "GFC_ToolURL");
+            string filename = System.AppDomain.CurrentDomain.BaseDirectory + "Temp/setup.exe";
+
+            try
+            {
+                if (File.Exists(filename))
+                {
+                    File.Delete(filename);
+                }
+                else
+                {
+                    WebClient wc = new WebClient();
+                    wc.DownloadDataAsync(new Uri(uri), filename);
+                   // wc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(wc_DownloadProgressChanged);
+                 //   wc.DownloadFileCompleted += new AsyncCompletedEventHandler(wc_DownloadFileCompleted);
+                }
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show(ex.Message.ToString());
+            }
+
+
         }
 
         public static void launchFile(string fn)
@@ -81,17 +113,7 @@ namespace GFC_Craker_Tools
                 }
             }
         }
-        public void CheckForUpdate()
-        {
-            String curentversion = variables.CurentVersion;
-            String UpdateVersion = ReadSiteXml(variables.ConfigUrl, "//gfc/config","version");
-
-            if (curentversion != UpdateVersion)
-            {
-                Console.WriteLine("Version "+ UpdateVersion+ " is available!");
-            }
-
-        }
+        
     }
 }
 

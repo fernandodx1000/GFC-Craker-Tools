@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GFC_Tools;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,49 +14,32 @@ namespace GFC_Craker_Tools
 {
     public partial class GFC_LoadScreen : Form
     {
-
+        static Variables variables = new Variables();
+        static GFC_Func gfc_Func = new GFC_Func();
         static GFC_MainScreen GFC_MainScreen = new GFC_MainScreen();
 
-       
-       public GFC_LoadScreen()
+
+
+
+        public GFC_LoadScreen()
         {
             InitializeComponent();
-            //Thread t = new Thread(test);
-            //t.Start();
-            test();
+            label3.Text = "Version: "+ variables.UpdateVersion;
+            label4.Text = "This Is Version: " + variables.version.ToString();
             
         }
-       
-        private void GFC_LoadScreen_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-           
-
+            GFC_Func.UpdateGFC();
         }
 
-
-        private void test()
+        private void button2_Click(object sender, EventArgs e)
         {
-            bool b = true;
-            while (b)
-            {
-                if (progressBar1.Value == 100)
-                {
-                    GFC_MainScreen.Show();
-                    this.Hide();
-                    b = false;
-                }
-                else
-                {
-                    progressBar1.Value++;
-                   // Thread.Sleep(1000);
-
-                }
-
-            }
+            GFC_MainScreen.Show();
+            this.Hide();
         }
 
-        private void progressBar1_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

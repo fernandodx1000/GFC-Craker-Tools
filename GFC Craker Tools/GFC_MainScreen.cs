@@ -127,7 +127,8 @@ namespace GFC_Craker_Tools
         bool p2 = true;
         private void Populatesw()
         {
-            DirectoryInfo dir = new DirectoryInfo(@"H:\Documentos\projectos c#\GFC Craker Tools\GFC Craker Tools\Resources\Images\Softwares\Icons");
+
+            DirectoryInfo dir = new DirectoryInfo(System.AppDomain.CurrentDomain.BaseDirectory + "Resources/Images/Softwares/Icons");
             this.listView1.View = View.LargeIcon;
             this.imageList1.ImageSize = new Size(100, 100);
             this.listView1.LargeImageList = this.imageList1;
@@ -170,7 +171,7 @@ namespace GFC_Craker_Tools
         private void PopulateGames()
         {
 
-            DirectoryInfo dir2 = new DirectoryInfo(@"H:\Documentos\projectos c#\GFC Craker Tools\GFC Craker Tools\Resources\Images\Games\Icons");
+            DirectoryInfo dir2 = new DirectoryInfo(System.AppDomain.CurrentDomain.BaseDirectory + "Resources/Images/Games/Icons");
             this.listView1.View = View.LargeIcon;
             this.imageList2.ImageSize = new Size(100, 100);
             this.listView1.LargeImageList = this.imageList2;
@@ -204,6 +205,11 @@ namespace GFC_Craker_Tools
                     }
                 }
             }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

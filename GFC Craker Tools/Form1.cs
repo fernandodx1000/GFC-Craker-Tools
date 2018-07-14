@@ -23,7 +23,15 @@ namespace GFC_Craker_Tools
 
         private void button1_Click(object sender, EventArgs e)
         {
-            GFC_Func.launchFile(@"C:\setup.exe");
+            try
+            {
+                GFC_Func.launchFile(@"C:\setup.exe");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
             Console.WriteLine(ProgramToCrack);
             GFC_Func.SwCrack(ProgramToCrack);
         
