@@ -24,7 +24,7 @@ namespace GFC_Craker_Tools
         static void Main()
         {
             GFC_Func func = new GFC_Func();
-            func.AdminRelauncher();
+           // func.AdminRelauncher();
 
             variables.Main();
 

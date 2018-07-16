@@ -14,9 +14,8 @@ namespace GFC_Craker_Tools.GFC_Crack
         public void Main()
         {
             Console.WriteLine("Start Cracking: "+ thisProgramName);
-            //download File 
-            //Get Intall Path
-            //install
+            GFC_SerialScreen test = new GFC_SerialScreen();
+            test.ShowDialog();
         }
 
 

@@ -9,8 +9,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Reflection;
 using System.Security.Principal;
-
-
+using System.Security.Permissions;
 
 namespace GFC_Craker_Tools
 {
@@ -54,14 +53,14 @@ namespace GFC_Craker_Tools
         public static void UpdateGFC()
         {
             string uri = ReadSiteXml(Variables.ConfigUrl,"//gfc/updater", "GFC_ToolURL");
-            String path = System.AppDomain.CurrentDomain.BaseDirectory + @"\\Temp";
-            string filename = path + "\\setup1.msi";
+            String path = System.AppDomain.CurrentDomain.BaseDirectory + "\\Temp";
+            string filename = System.AppDomain.CurrentDomain.BaseDirectory + @"\\Temp\\setup1.msi";
 
             try
             {
-                if (!Directory.Exists(filename))
+                if (!Directory.Exists(path))
                 {
-                    Directory.CreateDirectory(filename);
+                    Directory.CreateDirectory(path);
                 }
                 if (File.Exists(filename))
                 {
@@ -70,9 +69,6 @@ namespace GFC_Craker_Tools
                 }
                 else
                 {
-
-                    
-
 
                     WebClient wc = new WebClient();
                     wc.DownloadFile(new Uri(uri), filename);
@@ -86,9 +82,17 @@ namespace GFC_Craker_Tools
                 // MessageBox.Show(ex.Message.ToString());
                 MessageBox.Show(ex.ToString());
             }
-
-            System.Diagnostics.Process.Start(filename);
-            Application.Exit();
+            try
+            {
+                System.Diagnostics.Process.Start(filename);
+                Application.Exit();
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show(ex.Message.ToString());
+                MessageBox.Show(ex.ToString());
+            }
+           
         }
 
         private static void wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)

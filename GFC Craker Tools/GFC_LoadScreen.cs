@@ -50,7 +50,6 @@ namespace GFC_Craker_Tools
             {
                 Thread.CurrentThread.IsBackground = true;
                 GFC_Func.UpdateGFC();
-                Console.WriteLine("Hello, world");
             }).Start();
 
         }

@@ -130,8 +130,9 @@ namespace GFC_Craker_Tools
 
             DirectoryInfo dir = new DirectoryInfo(System.AppDomain.CurrentDomain.BaseDirectory + "Resources/Images/Softwares/Icons");
             this.listView1.View = View.LargeIcon;
-            this.imageList1.ImageSize = new Size(100, 100);
+            this.imageList1.ImageSize = new Size(128, 128);
             this.listView1.LargeImageList = this.imageList1;
+            this.AllowTransparency = true;
             int j = 0;
 
             if (p1)
@@ -173,8 +174,9 @@ namespace GFC_Craker_Tools
 
             DirectoryInfo dir2 = new DirectoryInfo(System.AppDomain.CurrentDomain.BaseDirectory + "Resources/Images/Games/Icons");
             this.listView1.View = View.LargeIcon;
-            this.imageList2.ImageSize = new Size(100, 100);
+            this.imageList2.ImageSize = new Size(128, 128);
             this.listView1.LargeImageList = this.imageList2;
+            this.AllowTransparency = true;
             int j = 0;
 
             if (p2)
