@@ -1,17 +1,15 @@
 ﻿using GFC_Tools;
 using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
-using GFC_Craker_Tools.GFC_Crack;
+using System.Reflection;
+using System.Security.Principal;
+
 
 
 namespace GFC_Craker_Tools
@@ -19,10 +17,7 @@ namespace GFC_Craker_Tools
     class GFC_Func
     {
 
-        static GFC_IOBit GFC_CCleaner = new GFC_IOBit();
-
-
-        
+        static GFC_Crack.GFC_CCleaner GFC_CCleaner = new GFC_Crack.GFC_CCleaner();
 
         public void SwCrack(string software)
         {
@@ -59,28 +54,52 @@ namespace GFC_Craker_Tools
         public static void UpdateGFC()
         {
             string uri = ReadSiteXml(Variables.ConfigUrl,"//gfc/updater", "GFC_ToolURL");
-            string filename = System.AppDomain.CurrentDomain.BaseDirectory + "Temp/setup.exe";
+            String path = System.AppDomain.CurrentDomain.BaseDirectory + @"\\Temp";
+            string filename = path + "\\setup1.msi";
 
             try
             {
+                if (!Directory.Exists(filename))
+                {
+                    Directory.CreateDirectory(filename);
+                }
                 if (File.Exists(filename))
                 {
                     File.Delete(filename);
+                    UpdateGFC();
                 }
                 else
                 {
+
+                    
+
+
                     WebClient wc = new WebClient();
-                    wc.DownloadDataAsync(new Uri(uri), filename);
-                   // wc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(wc_DownloadProgressChanged);
-                 //   wc.DownloadFileCompleted += new AsyncCompletedEventHandler(wc_DownloadFileCompleted);
+                    wc.DownloadFile(new Uri(uri), filename);
+                    //wc.DownloadDataAsync(new Uri(uri), filename);
+                    wc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(wc_DownloadProgressChanged);   
+                    wc.DownloadFileCompleted += new AsyncCompletedEventHandler(wc_DownloadFileCompleted);
                 }
             }
             catch (Exception ex)
             {
-               MessageBox.Show(ex.Message.ToString());
+                // MessageBox.Show(ex.Message.ToString());
+                MessageBox.Show(ex.ToString());
             }
 
+            System.Diagnostics.Process.Start(filename);
+            Application.Exit();
+        }
 
+        private static void wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            Console.WriteLine("Dowload is 100 % Complete");
+
+        }
+
+        private static void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        {
+            Console.WriteLine("Dowload is "+ e.ProgressPercentage + " Complete");
         }
 
         public static void launchFile(string fn)
@@ -113,7 +132,45 @@ namespace GFC_Craker_Tools
                 }
             }
         }
-        
+
+        public  void AdminRelauncher()
+        {
+            if (!IsRunAsAdmin())
+            {
+                ProcessStartInfo proc = new ProcessStartInfo();
+                proc.UseShellExecute = true;
+                proc.WorkingDirectory = Environment.CurrentDirectory;
+                proc.FileName = Assembly.GetEntryAssembly().CodeBase;
+
+                proc.Verb = "runas";
+
+                try
+                {
+                    Process.Start(proc);
+                    Application.Exit();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("This program must be run as an administrator! \n\n" + ex.ToString());
+                }
+            }
+        }
+
+        private bool IsRunAsAdmin()
+        {
+            try
+            {
+                WindowsIdentity id = WindowsIdentity.GetCurrent();
+                WindowsPrincipal principal = new WindowsPrincipal(id);
+                return principal.IsInRole(WindowsBuiltInRole.Administrator);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+
     }
 }
 

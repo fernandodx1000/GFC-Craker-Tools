@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace GFC_Craker_Tools.GFC_Crack
 {
-    class GFC_IOBit
+    class GFC_CCleaner
     {
         string thisProgramName ="-NOT SET!-";
 

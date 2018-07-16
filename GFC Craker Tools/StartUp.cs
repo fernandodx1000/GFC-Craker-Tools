@@ -1,8 +1,11 @@
 ﻿using GFC_Tools;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,11 +23,14 @@ namespace GFC_Craker_Tools
         [STAThread]
         static void Main()
         {
+            GFC_Func func = new GFC_Func();
+            func.AdminRelauncher();
+
             variables.Main();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            GFC_Func func = new GFC_Func();
+            
             CheckForUpdate();
         }
 
@@ -62,5 +68,8 @@ namespace GFC_Craker_Tools
             }
 
         }
+
+
+        
     }
 }
