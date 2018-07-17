@@ -30,8 +30,9 @@ namespace GFC_Craker_Tools
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
+
             CheckForUpdate();
+        
         }
 
         private static void LoadScreen()
@@ -48,9 +49,11 @@ namespace GFC_Craker_Tools
         public static void CheckForUpdate()
         {
             String curentversion = variables.CurentVersion;
-            
 
-            if (curentversion != variables.UpdateVersion)
+            Version FCversion = Version.Parse(curentversion);
+            Version FUversion = Version.Parse(variables.UpdateVersion);
+
+            if (FCversion < FUversion)
             {
                 Console.WriteLine("Version " + variables.UpdateVersion + " is available!");
 
