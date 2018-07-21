@@ -18,6 +18,7 @@ namespace GFC_Craker_Tools
     {
         static Variables variables = new Variables();
         static GFC_Func gfc_Func = new GFC_Func();
+        static GFC_ResourceManager _ResourceManager = new GFC_ResourceManager();
 
         public int Tab = 1;//0 News - 1- cracks- 2games- 
 
@@ -25,10 +26,28 @@ namespace GFC_Craker_Tools
 
         public GFC_MainScreen()
         {
-            this.Hide();
+            //ShowSplash
+            Thread t = new Thread(new ThreadStart(Splash));
+            t.Start();
             InitializeComponent();
-             
-   
+            //loading Data
+            /*string str = string.Empty;
+            for (int i = 0; i< 100000; i++)
+            {
+                str += i.ToString();
+            }
+            */
+            _ResourceManager.Start();
+
+            //complete
+            t.Abort();
+        }
+
+        void Splash()
+        {
+            SplashScreen.SplashForm frm = new SplashScreen.SplashForm();
+            frm.AppName = "Teste, Mas Cona tambem é bom";
+            Application.Run(frm);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -68,8 +87,6 @@ namespace GFC_Craker_Tools
             test.ShowDialog();
         }
 
-       
-      
         //exit Buton
         private void panel5_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -128,7 +145,7 @@ namespace GFC_Craker_Tools
         private void Populatesw()
         {
 
-            DirectoryInfo dir = new DirectoryInfo(System.AppDomain.CurrentDomain.BaseDirectory + "Resources/Images/Softwares/Icons");
+            DirectoryInfo dir = new DirectoryInfo(System.AppDomain.CurrentDomain.BaseDirectory + "Resources/Images/Softwares");
             this.listView1.View = View.LargeIcon;
             this.imageList1.ImageSize = new Size(128, 128);
             this.listView1.LargeImageList = this.imageList1;
@@ -172,7 +189,7 @@ namespace GFC_Craker_Tools
         private void PopulateGames()
         {
 
-            DirectoryInfo dir2 = new DirectoryInfo(System.AppDomain.CurrentDomain.BaseDirectory + "Resources/Images/Games/Icons");
+            DirectoryInfo dir2 = new DirectoryInfo(System.AppDomain.CurrentDomain.BaseDirectory + "Resources/Images/Games");
             this.listView1.View = View.LargeIcon;
             this.imageList2.ImageSize = new Size(128, 128);
             this.listView1.LargeImageList = this.imageList2;
@@ -209,7 +226,60 @@ namespace GFC_Craker_Tools
             }
         }
 
+        private void txt_Search_TextChanged(object sender, System.EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                for (int i = listView1.Items.Count - 1; i >= 0; i--)
+                {
+                    var item = listView1.Items[i];
+                    if (item.Text.ToLower().Contains(textBox1.Text.ToLower()))
+                    {
+                        item.BackColor = SystemColors.Highlight;
+                        item.ForeColor = SystemColors.HighlightText;
+                    }
+                    else
+                    {
+                        listView1.Items.Remove(item);
+                    }
+                }
+                if (listView1.SelectedItems.Count == 1)
+                {
+                    listView1.Focus();
+                }
+            }
+            else
+            {
+                changeTab(Tab);
+            }
+
+        }
+
+        Point mouseDownPoint = Point.Empty;
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDownPoint = new Point(e.X, e.Y);
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDownPoint = Point.Empty;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDownPoint.IsEmpty)
+                return;
+            Form f = sender as Form;
+            f.Location = new Point(f.Location.X + (e.X - mouseDownPoint.X), f.Location.Y + (e.Y - mouseDownPoint.Y));
+        }
+
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -63,6 +63,26 @@ namespace GFC_Craker_Tools.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EmptyDeafeningBengaltiger {
+            get {
+                object obj = ResourceManager.GetObject("EmptyDeafeningBengaltiger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap if_Drill_669943 {
+            get {
+                object obj = ResourceManager.GetObject("if_Drill_669943", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lg_comet_spinner {
             get {
                 object obj = ResourceManager.GetObject("lg.comet-spinner", resourceCulture);

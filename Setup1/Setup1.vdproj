@@ -22,18 +22,24 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7931467E09BBF09A00E13E0167037BEE"
+        "OwnerKey" = "8:_949A0B8D639C4AA1BEBA8EB4E4DBEFDF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7C87BFA78E334D5BBA5FC9A563CEFE82"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_949A0B8D639C4AA1BEBA8EB4E4DBEFDF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A85872B4DA8E4F518858860F901431C8"
-        "OwnerKey" = "8:_949A0B8D639C4AA1BEBA8EB4E4DBEFDF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_949A0B8D639C4AA1BEBA8EB4E4DBEFDF"
         "MsmSig" = "8:_UNDEFINED"
@@ -41,7 +47,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A85872B4DA8E4F518858860F901431C8"
+        "OwnerKey" = "8:_7931467E09BBF09A00E13E0167037BEE"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -159,14 +165,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A85872B4DA8E4F518858860F901431C8"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7931467E09BBF09A00E13E0167037BEE"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_A85872B4DA8E4F518858860F901431C8"
+                    "_7931467E09BBF09A00E13E0167037BEE"
                     {
                     "Name" = "8:System.Net.Http.dll"
                     "Attributes" = "3:512"
@@ -188,6 +194,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C87BFA78E334D5BBA5FC9A563CEFE82"
+            {
+            "SourcePath" = "8:..\\GFC Craker Tools\\bin\\Release\\Resources\\Images\\Softwares\\Icons\\CCleaner.ico"
+            "TargetName" = "8:CCleaner.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_C20EC5D1399F462C85C9B4ADD1A755C7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -226,6 +252,39 @@
                     "Property" = "8:_D1E1E0266E52426C8AE8445C713D72E7"
                         "Folders"
                         {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_3A94F6005899458CAE8D245651FC0985"
+                            {
+                            "Name" = "8:Images"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_8CD82C3581E64D14AFAA6350FAF4F6F4"
+                                "Folders"
+                                {
+                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_B70199CF8B4E4E909679F640DD8224E5"
+                                    {
+                                    "Name" = "8:Software"
+                                    "AlwaysCreate" = "11:FALSE"
+                                    "Condition" = "8:"
+                                    "Transitive" = "11:FALSE"
+                                    "Property" = "8:_89E01BAF453F4699B4189560F7FACFD0"
+                                        "Folders"
+                                        {
+                                            "{9EF0B969-E518-4E46-987F-47570745A589}:_C20EC5D1399F462C85C9B4ADD1A755C7"
+                                            {
+                                            "Name" = "8:Icons"
+                                            "AlwaysCreate" = "11:FALSE"
+                                            "Condition" = "8:"
+                                            "Transitive" = "11:FALSE"
+                                            "Property" = "8:_A24634144BF94B84A16FAE8BF98AD05E"
+                                                "Folders"
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -257,15 +316,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:GFC Craker Tool"
-        "ProductCode" = "8:{FAC1BADB-BBBA-4ABA-8AFC-5AB9E7B6A2B5}"
-        "PackageCode" = "8:{A6815737-4C70-483F-BBF2-32E937D9A6BD}"
+        "ProductCode" = "8:{5B803070-BE2E-45EC-A14F-B93C7CD11D7F}"
+        "PackageCode" = "8:{D8805CA9-FCDC-4583-8C3F-DBDD242CE0D2}"
         "UpgradeCode" = "8:{FCE159E1-012A-4694-A376-DA3F894E3B35}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.0.4"
         "Manufacturer" = "8:GFC"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

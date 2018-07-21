@@ -14,6 +14,7 @@ namespace GFC_Tools
         public string CurentVersion;
         public string MrUrl = "http://gfcdownloads.co.nf/download/gfc/?wpdmdl=80";
         public static string ConfigUrl = "http://gfcdownloads.co.nf/gfc_crack_tool/gfc-setings.xml";
+        public string ConfigUrl1 = "http://gfcdownloads.co.nf/gfc_crack_tool/gfc-setings.xml";
         public string UpdateVersion = GFC_Func.ReadSiteXml(ConfigUrl, "//gfc/config", "version");
 
            public Version version = Assembly.GetEntryAssembly().GetName().Version;
@@ -24,6 +25,11 @@ namespace GFC_Tools
             Console.WriteLine(CurentVersion);
         }
 
-
+        public string GetCurentVersion()
+        {
+            CurentVersion = version.ToString();
+            return CurentVersion;
+                 
+        }
     }
 }

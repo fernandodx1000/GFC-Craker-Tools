@@ -1,78 +1,46 @@
-﻿using GFC_Tools;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Security.Principal;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System;
+using System.Net;
 using System.Windows.Forms;
 
 namespace GFC_Craker_Tools
 {
-    static class StartUp
+     class StartUp 
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        private static Variables variables = new Variables();
-        private static GFC_Func func = new GFC_Func();
-
         [STAThread]
         static void Main()
         {
-            GFC_Func func = new GFC_Func();
-           // func.AdminRelauncher();
 
-            variables.Main();
-
+            //Init Point
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            CheckForUpdate();
-        
-        }
-
-        private static void LoadScreen()
-        {
-            Application.Run(new GFC_LoadScreen());
-
-        }
-
-        private static void LoadMainScreen()
-        {
+            //check for internet
+            if (!CheckForInternetConnection())
+            {
+                MessageBox.Show("You Need Internet To Run The Program. Program Will Quit !");
+                Application.Exit();
+            }
             Application.Run(new GFC_MainScreen());
+
+            MessageBox.Show("-This Is In DEV ! \n" +
+                "-Bugs Are Expected !");
+
         }
 
-        public static void CheckForUpdate()
+        public static bool CheckForInternetConnection()
         {
-            String curentversion = variables.CurentVersion;
-
-            Version FCversion = Version.Parse(curentversion);
-            Version FUversion = Version.Parse(variables.UpdateVersion);
-
-            if (FCversion < FUversion)
+            try
             {
-                Console.WriteLine("Version " + variables.UpdateVersion + " is available!");
-
-                string path = System.Reflection.Assembly.GetExecutingAssembly().CodeBase;
-                var directory = System.IO.Path.GetDirectoryName(path);
-
-                
-                Console.WriteLine(directory);
-                LoadScreen(); 
+                using (var client = new WebClient())
+                using (client.OpenRead("http://clients3.google.com/generate_204"))
+                {
+                    return true;
+                }
             }
-            else
+            catch
             {
-                Thread t = new Thread(LoadMainScreen);
-                t.Start();
+                return false;
             }
-
-        }
-
-
-        
+        } 
     }
 }
